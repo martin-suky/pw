@@ -25,7 +25,9 @@
         "!node_modules/**"
     ],
     "files": [
+        "js/AppDispatcher.ts",
         "js/interfaces.d.ts",
+        "js/store/UserStore.ts",
         "typings/flux/flux.d.ts",
         "typings/react-router/history.d.ts",
         "typings/react-router/react-router.d.ts",
