@@ -21,6 +21,8 @@
     ],
     "files": [
         "js/components/app.ts",
+        "js/components/login.ts",
+        "js/components/main.ts",
         "js/components/top-menu.ts",
         "js/index.ts",
         "typings/tsd.d.ts"
