@@ -1,7 +1,7 @@
 {
     "compileOnSave": true,
     "compilerOptions": {
-        "target": "es5",
+        "target": "es6",
         "module": "system",
         "moduleResolution": "node",
         "sourceMap": true,
@@ -24,7 +24,9 @@
         "js/components/login.ts",
         "js/components/main.ts",
         "js/components/top-menu.ts",
+        "js/entity/login.ts",
         "js/index.ts",
+        "js/services/session-service.ts",
         "typings/tsd.d.ts"
     ]
 }
