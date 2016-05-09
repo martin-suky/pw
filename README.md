@@ -8,7 +8,7 @@ Server
 Client
 * Typescript
 * React
-* Flux
+* Angular 2
 
 ## Start DEV mode
 First version. Hopefully I will improve it in future.

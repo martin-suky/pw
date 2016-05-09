@@ -22,8 +22,15 @@
               js: {
                 format: 'register',
                 defaultExtension: 'js'
+              },
+              'ng2-cookies': {
+                format: 'register',
+                defaultExtension: 'js'
               }
-            }
+          },
+          map: {
+            'ng2-cookies': 'node_modules/ng2-cookies'
+          }
           });
           System.import('js/index')
                 .then(null, console.error.bind(console));

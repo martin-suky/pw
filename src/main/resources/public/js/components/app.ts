@@ -1,8 +1,10 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 import {TopMenu} from './top-menu';
-import {Login} from './login';
+import {LoginForm} from './login-form';
 import {Main} from './main';
+
+import {SessionService} from '../services/session-service';
 
 @Component({
   selector: 'pw',
@@ -12,13 +14,13 @@ import {Main} from './main';
     </div>
     `,
     directives: [ROUTER_DIRECTIVES],
-    providers: [ROUTER_PROVIDERS]
+    providers: [ROUTER_PROVIDERS, SessionService]
 })
 @RouteConfig([
   {
     path: '/login',
-    name: 'Login',
-    component: Login
+    name: 'LoginForm',
+    component: LoginForm
   },
   {
     path: '/main',

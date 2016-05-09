@@ -8,9 +8,9 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "removeComments": false,
-        "noImplicitAny": false
+        "noImplicitAny": false,
+        "watch": true
     },
-    "exclude": [],
     "atom": {
         "rewriteTsconfig": true
     },
@@ -21,9 +21,12 @@
     ],
     "files": [
         "js/components/app.ts",
-        "js/components/login.ts",
+        "js/components/login-form.ts",
         "js/components/main.ts",
         "js/components/top-menu.ts",
+        "js/entity/abstract-entity.ts",
+        "js/entity/audited-entity.ts",
+        "js/entity/gas-log.ts",
         "js/entity/login.ts",
         "js/index.ts",
         "js/services/session-service.ts",
