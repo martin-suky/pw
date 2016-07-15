@@ -1,7 +1,6 @@
-import {Injectable} from 'angular2/core';
-import { Cookie } from 'ng2-cookies/ng2-cookies';
-
-import {Login} from '../entity/login';
+import {Login} from "../entity/login";
+import {Injectable} from "@angular/core";
+import {Cookie} from "ng2-cookies/ng2-cookies";
 
 @Injectable()
 export class SessionService {
@@ -26,7 +25,7 @@ export class SessionService {
   public login(login:Login) {
     return new Promise<boolean>(resolve => {
       this._login = login;
-      Cookie.setCookie(SessionService.COOKIE_NAME, login.username + ";" + login.password);
+      Cookie.set(SessionService.COOKIE_NAME, login.username + ";" + login.password);
       resolve(true);
     });
   }
@@ -36,11 +35,11 @@ export class SessionService {
    */
   public logout() {
     this._login = null;
-    Cookie.deleteCookie(SessionService.COOKIE_NAME);
+    Cookie.delete(SessionService.COOKIE_NAME);
   }
   
   private getLoginFromCookie():Login {
-    let user:string = Cookie.getCookie(SessionService.COOKIE_NAME);
+    let user:string = Cookie.get(SessionService.COOKIE_NAME);
     if (user == null) {
       return null;
     }

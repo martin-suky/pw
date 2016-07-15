@@ -1,7 +1,7 @@
-import {Component} from 'angular2/core';
-import {RouterLink, Router} from 'angular2/router';
 import {SessionService} from '../services/session-service';
 import {Login} from '../entity/login';
+import {RouterLink, Router} from "@angular/router";
+import {Component} from "@angular/core";
 
 @Component({
   selector: 'login-form',

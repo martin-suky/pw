@@ -1,6 +1,6 @@
-import {Component, OnInit} from 'angular2/core';
-import {Router, RouterLink} from 'angular2/router';
-import {SessionService} from '../services/session-service';
+import {SessionService} from "../services/session-service";
+import {RouterLink, Router} from "@angular/router";
+import {Component, OnInit} from "@angular/core";
 
 @Component({
   selector: 'main',

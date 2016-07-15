@@ -5,3 +5,4 @@ src/main/resources/public/node_modules
 src/main/resources/public/js/**/*.js
 src/main/resources/public/js/**/*.map
 bundle.js
+node_modules

@@ -1,10 +1,8 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
-import {TopMenu} from './top-menu';
-import {LoginForm} from './login-form';
-import {Main} from './main';
-
-import {SessionService} from '../services/session-service';
+import {LoginForm} from "./login-form";
+import {Main} from "./main";
+import {SessionService} from "../services/session-service";
+import {ROUTER_DIRECTIVES} from "@angular/router";
+import {Component} from "@angular/core";
 
 @Component({
   selector: 'pw',
@@ -14,19 +12,6 @@ import {SessionService} from '../services/session-service';
     </div>
     `,
     directives: [ROUTER_DIRECTIVES],
-    providers: [ROUTER_PROVIDERS, SessionService]
+    providers: [SessionService]
 })
-@RouteConfig([
-  {
-    path: '/login',
-    name: 'LoginForm',
-    component: LoginForm
-  },
-  {
-    path: '/main',
-    name: 'Main',
-    component: Main,
-    useAsDefault: true
-  }
-])
 export class App {}
