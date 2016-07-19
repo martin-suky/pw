@@ -4,37 +4,20 @@
         <base href="/">
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="static/css/bootstrap.css"/>
+        <link rel="stylesheet" href="node_modules/ng2-material/ng2-material.css">
+        <link rel="stylesheet" href="node_modules/ng2-material/font/font.css">
         <link rel="stylesheet" href="static/app.css"/>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.26/system-polyfills.js"></script>
-        <script src="https://npmcdn.com/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
-        <script src="https://code.angularjs.org/tools/system.js"></script>
-        <script src="https://code.angularjs.org/tools/typescript.js"></script>
-        <script src="https://code.angularjs.org/2.0.0-beta.16/angular2-polyfills.js"></script>
-        <script src="https://code.angularjs.org/2.0.0-beta.16/Rx.js"></script>
-        <script src="https://code.angularjs.org/2.0.0-beta.16/angular2.dev.js"></script>
-        <script src="node_modules/angular2/bundles/router.dev.js"></script>
+        <script src="node_modules/core-js/client/shim.min.js"></script>
+
+        <script src="node_modules/zone.js/dist/zone.js"></script>
+        <script src="node_modules/reflect-metadata/Reflect.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+        <script src="systemjs.config.js"></script>
         <script>
-          System.config({
-            packages: {
-              js: {
-                format: 'register',
-                defaultExtension: 'js'
-              },
-              'ng2-cookies': {
-                format: 'register',
-                defaultExtension: 'js'
-              }
-          },
-          map: {
-            'ng2-cookies': 'node_modules/ng2-cookies'
-          }
-          });
-          System.import('js/index')
-                .then(null, console.error.bind(console));
-          </script>
+            System.import('app').catch(function(err){ console.error(err); });
+        </script>
     </head>
     <body>
         <pw>Loading...</pw>

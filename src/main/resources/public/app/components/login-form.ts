@@ -11,9 +11,9 @@ import {Component} from "@angular/core";
               <form class="form-signin" (ngSubmit)="onSubmit()">
                 <h2 class="form-signin-heading">Please sign in</h2>
                 <label for="inputEmail" class="sr-only">Email address</label>
-                <input [(ngModel)]="login.username" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input [(ngModel)]="login.username" name="username" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                 <label for="inputPassword" class="sr-only">Password</label>
-                <input [(ngModel)]="login.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input [(ngModel)]="login.password" name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                 <div class="checkbox">
                   <label>
                     <input type="checkbox" value="remember-me"> Remember me
@@ -34,7 +34,7 @@ export class LoginForm {
 
   onSubmit():void {
     this.sessionService.login(this.login).then(result => {if (result) {
-        this.router.navigate(['Main']);
+        this.router.navigate(['/main']);
       }
     });
   }

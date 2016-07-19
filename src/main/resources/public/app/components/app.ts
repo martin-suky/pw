@@ -1,17 +1,16 @@
-import {LoginForm} from "./login-form";
-import {Main} from "./main";
 import {SessionService} from "../services/session-service";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 import {Component} from "@angular/core";
+import {MATERIAL_PROVIDERS, MdContent} from "ng2-material";
 
 @Component({
   selector: 'pw',
   template: `
-    <div>
+    <md-content>
       <router-outlet></router-outlet>
-    </div>
+    </md-content>
     `,
-    directives: [ROUTER_DIRECTIVES],
-    providers: [SessionService]
+    directives: [ROUTER_DIRECTIVES, MdContent],
+    providers: [SessionService, MATERIAL_PROVIDERS]
 })
 export class App {}

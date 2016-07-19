@@ -33,7 +33,7 @@ export class SessionService {
   /**
    * logout
    */
-  public logout() {
+  public logout():void {
     this._login = null;
     Cookie.delete(SessionService.COOKIE_NAME);
   }

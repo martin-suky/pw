@@ -2,7 +2,7 @@
 server.iml
 target
 src/main/resources/public/node_modules
-src/main/resources/public/js/**/*.js
-src/main/resources/public/js/**/*.map
+src/main/resources/public/app/**/*.js
+src/main/resources/public/app/**/*.map
 bundle.js
 node_modules

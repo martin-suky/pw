@@ -1,14 +1,12 @@
 import {SessionService} from "../services/session-service";
-import {RouterLink, Router} from "@angular/router";
+import {Router, ROUTER_DIRECTIVES} from "@angular/router";
 import {Component, OnInit} from "@angular/core";
+import {TopMenu} from "./top-menu";
 
 @Component({
   selector: 'main',
-  template: `
-            <h1>Main</h1>
-            <a [routerLink]="['LoginForm']">Login</a>
-            `,
-  directives: [RouterLink],
+  templateUrl: './app/components/main.html',
+  directives: [ROUTER_DIRECTIVES, TopMenu],
   providers: []
 })
 export class Main implements OnInit {
@@ -16,7 +14,7 @@ export class Main implements OnInit {
 
   public ngOnInit() {
     this.sessionService.isLoggedIn().then(result => {if (!result) {
-        this.router.navigate(['LoginForm']);
+        this.router.navigate(['/login']);
     }});
   }
 }
