@@ -1,23 +1,25 @@
-import {SessionService} from '../../services/session-service';
+import {Router} from '@angular/router';
+import {Component} from '@angular/core';
 import {Login} from '../../entity/login';
-import {RouterLink, Router} from "@angular/router";
-import {Component} from "@angular/core";
+import {SessionService} from '../../services/session-service';
 
 @Component({
-  selector: 'login-form',
-  templateUrl: './app/components/login-form/login-form.component.html',
-  directives: [RouterLink]
+    moduleId: module.id,
+    selector: 'login-form',
+    templateUrl: 'login-form.component.html',
 })
 export class LoginFormComponent {
 
-  login:Login = new Login();
+    login: Login = new Login();
 
-  constructor(private sessionService:SessionService, private router:Router) {}
+    constructor(private sessionService: SessionService, private router: Router) {
+    }
 
-  onSubmit():void {
-    this.sessionService.login(this.login).then(result => {if (result) {
-        this.router.navigate(['/main']);
-      }
-    });
-  }
+    onSubmit(): void {
+        this.sessionService.login(this.login).then(result => {
+            if (result) {
+                this.router.navigate(['/main']);
+            }
+        });
+    }
 }

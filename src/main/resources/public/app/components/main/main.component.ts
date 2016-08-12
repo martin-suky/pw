@@ -1,15 +1,14 @@
-import {SessionService} from "../../services/session-service";
-import {Router, ROUTER_DIRECTIVES} from "@angular/router";
-import {Component, OnInit} from "@angular/core";
+import {SessionService} from '../../services/session-service';
+import {Router} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'main',
-  templateUrl: './app/components/main/main.component.html',
-  directives: [ROUTER_DIRECTIVES],
-  providers: []
+  templateUrl: 'main.component.html',
 })
 export class MainComponent implements OnInit {
-  constructor(private sessionService:SessionService, private router:Router) {}
+  constructor(private sessionService: SessionService, private router: Router) {}
 
   public ngOnInit() {
     this.sessionService.isLoggedIn().then(result => {if (!result) {

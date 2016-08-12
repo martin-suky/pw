@@ -1,9 +1,8 @@
-import {Component} from "@angular/core";
+import {Component} from '@angular/core';
 
 @Component({
+    moduleId: module.id,
     selector: 'gas-overview',
-    templateUrl: './app/components/gas-overview/gas-overview.component.html',
+    templateUrl: 'gas-overview.component.html',
 })
-export class GasOverviewComponent {
-    
-}
+export class GasOverviewComponent { }
